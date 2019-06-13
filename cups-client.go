@@ -225,7 +225,7 @@ func (c *CUPSClient) DeletePrinter(printer string) error {
 }
 
 func (c *CUPSClient) GetPrinters(attributes []string) (map[string]Attributes, error) {
-	req := NewRequest(OperationCupsGetPrinters, 1)
+	req := NewRequest(OperationCupsGetPrinters, 2)
 
 	if attributes == nil {
 		req.OperationAttributes[OperationAttributeRequestedAttributes] = DefaultPrinterAttributes
